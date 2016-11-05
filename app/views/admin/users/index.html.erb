@@ -1,0 +1,11 @@
+<% provide :title, "Admin pages" %>
+<h1>Admin pages</h1>
+<div class="row">
+  <%= render "search_user" %>
+</div>
+<div class="show_user" >
+  <ul class="users">
+    <%= render @users %>
+    <%= will_paginate @users %>
+  </ul>
+</div>
