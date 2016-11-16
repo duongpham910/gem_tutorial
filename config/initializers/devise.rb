@@ -12,5 +12,7 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
 
-  config.omniauth :facebook, "323840967972115", "848cb536a935b11f655cc3763129d40c"
+  config.omniauth :facebook, ENV["FACEBOOK_ID"], ENV["FACEBOOK_SECRET"]
+  require "omniauth-google-oauth2"
+  config.omniauth :google_oauth2, "596431766356-94a4p2spb7400n7j8ukqoa55b3prte0m.apps.googleusercontent.com", "v4BcL2gD1XPFhqxNj2huygO_"
 end
